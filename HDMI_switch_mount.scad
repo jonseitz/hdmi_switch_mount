@@ -55,12 +55,12 @@ difference() {
     };
   };
   union () {
-    translate([SWITCH_WIDTH/3, 0, SWITCH_DEPTH/2,]) {
+    translate([SWITCH_WIDTH/3, 0, SWITCH_DEPTH/2]) {
       rotate([90,0,0]) {
         screw();
       };
     };
-    translate([SWITCH_WIDTH/1.5, 0, SWITCH_DEPTH/2,]) {
+    translate([SWITCH_WIDTH/1.5, 0, SWITCH_DEPTH/2]) {
       rotate([90,0,0]) {
         screw();
       };
