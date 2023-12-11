@@ -1,10 +1,17 @@
+// The height of the switch while horizontal, which will be the amount the switch sticks out from the wall when mounted vertically
 SWITCH_HEIGHT=22;
+
+// The depth of the switch while horizontal, which will be the vertical dimension on the wall
 SWITCH_DEPTH=71;
+
+// The width of the switch while horizontal, which will still be the width on the wall
 SWITCH_WIDTH=150;
 
+// How thick the exterior of the mount should be. This will be doubled for the back panel
 SHELL_THICKNESS=3;
 
-SCREW_HOLE=4;
+// The diameter of the screw shaft.
+SCREW_HOLE_DIAMETER=4;
 
 $fn = 100;
 
@@ -12,10 +19,10 @@ $fn = 100;
 module screw() {
   union() {
     translate([0,0,SHELL_THICKNESS]) {
-      cylinder(h=SHELL_THICKNESS*2, d=SCREW_HOLE, center=true);
+      cylinder(h=SHELL_THICKNESS*2, d=SCREW_HOLE_DIAMETER, center=true);
     };
     translate([0,0,SHELL_THICKNESS/2]) {
-      cylinder(h=SHELL_THICKNESS, d=SCREW_HOLE*2, center=true);
+      cylinder(h=SHELL_THICKNESS, d=SCREW_HOLE_DIAMETER*2, center=true);
     };
   }
 }
