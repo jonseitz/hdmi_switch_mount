@@ -2,10 +2,10 @@
 SWITCH_HEIGHT=22;
 
 // The depth of the switch while horizontal, which will be the vertical dimension on the wall
-SWITCH_DEPTH=71;
+SWITCH_DEPTH=85;
 
 // The width of the switch while horizontal, which will still be the width on the wall
-SWITCH_WIDTH=150;
+SWITCH_WIDTH=152;
 
 // How thick the exterior of the mount should be. This will be doubled for the back panel
 SHELL_THICKNESS=3;
