@@ -10,6 +10,9 @@ SWITCH_WIDTH=152;
 // How thick the exterior of the mount should be. This will be doubled for the back panel
 SHELL_THICKNESS=3;
 
+// How far the overhand should extend to suppor the switch
+OVERHANG = 9;
+
 // The diameter of the screw shaft.
 SCREW_HOLE_DIAMETER=4;
 
@@ -39,10 +42,10 @@ difference() {
   union () {
     linear_extrude(SWITCH_DEPTH + (SHELL_THICKNESS)) {
       polygon([
-        [SHELL_THICKNESS * 2, 0],
-        [SHELL_THICKNESS * 2, SWITCH_HEIGHT + SHELL_THICKNESS],
-        [SWITCH_WIDTH - (SHELL_THICKNESS * 2), SWITCH_HEIGHT + SHELL_THICKNESS],
-        [SWITCH_WIDTH - (SHELL_THICKNESS * 2), 0],
+        [OVERHANG, 0],
+        [OVERHANG, SWITCH_HEIGHT + SHELL_THICKNESS],
+        [SWITCH_WIDTH - OVERHANG, SWITCH_HEIGHT + SHELL_THICKNESS],
+        [SWITCH_WIDTH - OVERHANG, 0],
       ]);
     };
     linear_extrude(SWITCH_DEPTH) {
